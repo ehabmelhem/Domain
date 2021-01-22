@@ -48,14 +48,14 @@ function handleSubmit(e) {
       console.log(data.index);
       if (localStorage.getItem("add") !== "success") {
         if (data.index !== -1) {
+          var h1 = document.createElement("h1");
           h1.innerText = data.userName + " " + data.userPass;
-          localStorage.setItem("add", "success");
+          //   localStorage.setItem("add", "success");
         } else {
           h1.innerText = data.messeg;
         }
       } else {
         h1.innerText = "you have sign in";
-        localStorage.setItem("add", "notgood");
       }
     });
 }
