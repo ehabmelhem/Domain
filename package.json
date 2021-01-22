@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/ehabmelhem/Domain/issues"
   },
-  "homepage": "https://github.com/ehabmelhem/Domain#readme"
+  "homepage": "https://github.com/ehabmelhem/Domain#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
