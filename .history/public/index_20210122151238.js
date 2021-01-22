@@ -42,15 +42,6 @@ function handleSubmit(e) {
     .then((r) => r.json())
     .then((data) => {
       if (data.index !== -1) {
-        var h1 = document.createElement("h1");
-        h1.innerText = data.userName + " " + data.userPass;
-        document.getElementById("root").innerHTML = "";
-        document.getElementById("root").appendChild(h1);
-      } else {
-        var h1 = document.createElement("h1");
-        h1.innerText = data.messeg;
-        document.getElementById("root").innerHTML = "";
-        document.getElementById("root").appendChild(h1);
       }
     });
 }

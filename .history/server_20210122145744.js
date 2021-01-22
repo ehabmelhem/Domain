@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 
 const users = [
   { name: "Kilani", password: "222222222" },
-  { name: "Yara", password: "111" },
+  { name: "Yara", password: "333333333" },
   { name: "Ihab", password: "444444" },
 ];
 
@@ -28,12 +28,10 @@ app.get("/get-password", (req, res) => {
 
 app.post("/login", (req, res) => {
   const { name, password } = req.body;
-  const index = users.findIndex(
-    (user) => user.name === name && user.password === password
-  );
+  const index = users.findIndex((user) => user.name === name);
+  const index1 = users.findIndex((pass) => user.password === password);
   if (index === -1) {
-    res.send({ messeg: "please insert valid inputs", index: -1 });
-  } else res.send({ userName: name, userPass: password, index: 1 });
+  } else res.send({});
 });
 
 const port = process.env.PORT || 3002;

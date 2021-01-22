@@ -48,7 +48,7 @@ function handleSubmit(e) {
         document.getElementById("root").appendChild(h1);
       } else {
         var h1 = document.createElement("h1");
-        h1.innerText = data.messeg;
+        h1.innerText = data.userName + " " + data.userPass;
         document.getElementById("root").innerHTML = "";
         document.getElementById("root").appendChild(h1);
       }

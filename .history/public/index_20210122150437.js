@@ -42,15 +42,7 @@ function handleSubmit(e) {
     .then((r) => r.json())
     .then((data) => {
       if (data.index !== -1) {
-        var h1 = document.createElement("h1");
-        h1.innerText = data.userName + " " + data.userPass;
-        document.getElementById("root").innerHTML = "";
-        document.getElementById("root").appendChild(h1);
-      } else {
-        var h1 = document.createElement("h1");
-        h1.innerText = data.messeg;
-        document.getElementById("root").innerHTML = "";
-        document.getElementById("root").appendChild(h1);
+        window.location.replace("page2.html");
       }
     });
 }
@@ -59,7 +51,7 @@ function renderUsers(users) {
   const root = document.querySelector("#root");
   let html = "";
   users.forEach((user) => {
-    html += `<p onclick="getPassword('${user.userName}')">Name: ${user.userPass}</p>`;
+    html += `<p onclick="getPassword('${user.name}')">Name: ${user.name}</p>`;
   });
 
   root.innerHTML = html;

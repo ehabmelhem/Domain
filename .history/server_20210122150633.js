@@ -10,7 +10,6 @@ const users = [
   { name: "Yara", password: "111" },
   { name: "Ihab", password: "444444" },
 ];
-
 //routes
 app.get("/get-users", (req, res) => {
   res.send(users);
