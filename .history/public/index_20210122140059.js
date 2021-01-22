@@ -5,13 +5,12 @@ document.querySelector(".flex").addEventListener("submit", (e) => {
   e.preventDefault();
   const user = document.getElementById("user");
   const pass = document.getElementById("pass");
-  fetch(`/get-adduser?user=${user.value}&pass=${pass.value}`)
+  fetch(`/get-adduser?user=${user}&pass=${pass}`)
     .then((r) => r.json())
     .then((users) => {
       console.log(users);
     });
 });
-
 function getUsers() {
   console.log("get users");
 

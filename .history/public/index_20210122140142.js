@@ -11,7 +11,6 @@ document.querySelector(".flex").addEventListener("submit", (e) => {
       console.log(users);
     });
 });
-
 function getUsers() {
   console.log("get users");
 

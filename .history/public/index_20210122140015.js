@@ -1,17 +1,7 @@
 // const { func } = require("prop-types");
 
 // document.querySelector("h1").style.background = "yellow";
-document.querySelector(".flex").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const user = document.getElementById("user");
-  const pass = document.getElementById("pass");
-  fetch(`/get-adduser?user=${user.value}&pass=${pass.value}`)
-    .then((r) => r.json())
-    .then((users) => {
-      console.log(users);
-    });
-});
-
+document.querySelector(".flex").addEventListener("submit", addUser(e));
 function getUsers() {
   console.log("get users");
 
@@ -25,7 +15,6 @@ function getUsers() {
 }
 
 function addUser(e) {
-  e.preventDefault();
   const user = document.getElementById("user");
   const pass = document.getElementById("pass");
   fetch(`/get-adduser?user=${user}&pass=${pass}`)

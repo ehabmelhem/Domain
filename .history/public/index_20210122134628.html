@@ -5,23 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Tal's first site :-)</title>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <style>
-    .flex {
-      width: fit-content;
-      margin: 0 auto;
-      margin-top: 150px;
-    }
-  </style>
+
   <body>
+    <h1>Hi, I am Tal's app</h1>
+    <a href="page2.html">Link to page 2</a>
+    <button onclick="getUsers()">Get users</button>
+    <div id="root"></div>
+
     <form class="flex">
-      <label>User Name:</label> <input id="user" type="text" />
-      <br />
-      <br />
+      <label>User Name:</label> <input type="text" />
       <label>Password</label>
-      <input id="pass" type="password" />
-      <button type="submit">add user</button>
+      <input type="password" />
     </form>
   </body>
   <script src="index.js"></script>

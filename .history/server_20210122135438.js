@@ -25,9 +25,6 @@ app.get("/get-password", (req, res) => {
 });
 app.get("/get-adduser", (req, res) => {
   const { user, pass } = req.query;
-  console.log(user + " " + pass);
-  users.push({ name: user, password: pass });
-  res.send(users);
 });
 
 const port = process.env.PORT || 3002;
